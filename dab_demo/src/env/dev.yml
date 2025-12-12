@@ -1,0 +1,7 @@
+targets:
+  dev:
+    preset: 
+      name_prefix: "dev_"
+    permissions:
+      - user_name: joserahul98@gmail.com
+        level: CAN_MANAGE
