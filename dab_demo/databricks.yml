@@ -8,7 +8,20 @@ include:
   - resources/*.yml
   - resources/*/*.yml
 
-
+resources:
+  # We can also define resources directly in this file. This is useful for small bundles with few resources.
+  # For larger bundles, it's better to split resources into separate files and include them as shown above.
+  jobs:
+    demo_job_dab:
+      name: demo_job_dab
+      tasks:
+        - task_key: test_dab
+          notebook_task:
+            notebook_path: /resources/notebooks/demo_dab_test
+            source: WORKSPACE
+          environment_key: Default
+      git_source:
+        git_url: https://github.com/databricks/dab_demo.git
 
 # Variable declarations. These variables are assigned in the dev/prod targets below.
 variables:
